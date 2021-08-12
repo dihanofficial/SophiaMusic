@@ -20,8 +20,8 @@ from typing import List
 from pyrogram.types import Chat
 from pyrogram.types import User
 
-from EzilaXMusicV1.function.admins import get as gett
-from EzilaXMusicV1.function.admins import set
+from SophiaMusic.function.admins import get as gett
+from SophiaMusic.function.admins import set
 
 
 async def get_administrators(chat: Chat) -> List[User]:
