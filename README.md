@@ -3,7 +3,7 @@
 
 ### A bot that can play music on Telegram Group and Channel Voice Chats
 #### POWERED BY [PYTGCALLS](https://github.com/pytgcalls/pytgcalls)
-### Available on telegram as [@SophiaMusicBot](https://t.me/sophiamusicbot)
+### Available on telegram as [@SophiaSLBot](https://t.me/sophiaslbot)
 
 <p align="center">
   <img src="">
