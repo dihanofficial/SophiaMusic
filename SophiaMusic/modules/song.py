@@ -34,7 +34,7 @@ def song(client, message):
         query += " " + str(i)
     print(query)
     m = message.reply("🔎 Finding the song...")
-    ydl_opts = {"format": "bestaudio/best"}
+    ydl_opts = {"format": "bestaudio/best[ext=m4a]"}
     try:
         results = YoutubeSearch(query, max_results=1).to_dict()
         link = f"https://youtube.com{results[0]['url_suffix']}"
@@ -59,7 +59,7 @@ def song(client, message):
             info_dict = ydl.extract_info(link, download=False)
             audio_file = ydl.prepare_filename(info_dict)
             ydl.process_info(info_dict)
-        rep = "**🎵 Uploaded by @SophiaSLBot**"
+        rep = "**🎵 Uploaded by **"
         secmul, dur, dur_arr = 1, 0, duration.split(":")
         for i in range(len(dur_arr) - 1, -1, -1):
             dur += int(dur_arr[i]) * secmul
@@ -83,6 +83,18 @@ def song(client, message):
     except Exception as e:
         print(e)
 
+        
+# Many thanks to friday userbot project github.com/devsexpo/fridayuserbot
+# Copied from https://github.com/StarkGang/FridayUserbot/blob/master/main_startup/helper_func/basic_helpers.py
+
+
+# Copyright (C) 2020-2021 by DevsExpo@Github, < https://github.com/DevsExpo >.
+#
+# This file is part of < https://github.com/DevsExpo/FridayUserBot > project,
+# and is released under the "GNU v3.0 License Agreement".
+# Please see < https://github.com/DevsExpo/blob/master/LICENSE >
+#
+# All rights reserved.
 
 
 def get_text(message: Message) -> [None, str]:
@@ -266,11 +278,27 @@ async def jssong(_, message):
     query = text.replace(" ", "%20")
     m = await message.reply_text("Searching...")
 
-# ======= Copied from https://github.com/TheHamkerCat/WilliamButcherBot/blob/dev/wbb/modules/music.py line 170 ========
+    # ======= Copied from https://github.com/TheHamkerCat/WilliamButcherBot/blob/dev/wbb/modules/music.py line 170 ========
 
-"""
-Sophia Music v6
-"""
+    """
+    MIT License
+    Copyright (c) 2021 TheHamkerCat
+    Permission is hereby granted, free of charge, to any person obtaining a copy
+    of this software and associated documentation files (the "Software"), to deal
+    in the Software without restriction, including without limitation the rights
+    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the Software is
+    furnished to do so, subject to the following conditions:
+    The above copyright notice and this permission notice shall be included in all
+    copies or substantial portions of the Software.
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+    SOFTWARE.
+    """
     
     try:
         songs = await arq.saavn(query)
