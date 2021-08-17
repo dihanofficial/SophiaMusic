@@ -1,7 +1,7 @@
 <h2 align="centre">Sophia Music v6 🎵</h2>
 
 <p align="center">
-  <img src="https://telegra.ph/file/e1d2e60a756b2cda8a058.jpg">
+  <img src="https://telegra.ph/file/b28bf29ec9606aab06174.jpg">
 </p>
 
 <h3>Requirements 📝</h3>
