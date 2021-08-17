@@ -1,109 +1,28 @@
-
-<h1 align="centre"> Sophia Music V6 🎵 </h1> 
-
-### A bot that can play music on Telegram Group and Channel Voice Chats
-#### POWERED BY [PYTGCALLS](https://github.com/pytgcalls/pytgcalls)
-### Available on telegram as [@SophiaSLBot](https://t.me/sophiaslbot)
+<h2 align="centre">Sophia Music v6 🎵</h2>
 
 <p align="center">
-  <img src="">
+  <img src="https://telegra.ph/file/e1d2e60a756b2cda8a058.jpg">
 </p>
 
-> ⭐️ Thanks to everyone who starred Sophia Music, That is the greatest pleasure we have !
+<h3>Requirements 📝</h3>
 
-<h2> Features 🔥 </h2>
+- FFmpeg
+- NodeJS [nodesource.com](https://nodesource.com/)
+- Python 3.7+
+- [PyTgCalls](https://github.com/pytgcalls/pytgcalls)
 
-- Thumbnail Support
-- Playlist Support
-- Current playback support
-- Showing track names when skipping
-- Zero downtime, Fully Stable
-- Youtube, Local & Saavn playback support
-- Settings panel
-- Control with buttons
-- Userbot auto join
-- Channel Music Play
-- Keyboard selection support for youtube play
-
-## 🚀 Deployment
-
-### 💜 Heroku/Railway
-
-[![Deploy+on+Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/dihanofficial/sophiamusic-v6)
-
-
-Get pyrogram (p)  `SESSION` from here:
-[![Run on Repl.it](https://repl.it/badge/github/SpEcHiDe/GenerateStringSession)](https://repl.it/@SpEcHiDe/GenerateStringSession)
-
-### ⚔ Self-hosting (For Devs) 
-```sh
-# Install Git First (apt-instll git)
-$ git clone https://github.com/dihanofficial/sophiamusic-v6
-$ cd DaisyXMusic
-# Upgrade sources
-# Install All Requirements 
-$ pip3 install -r requirements.txt
-# Rename example.env to local.env and fill
-$ npm i -g npm
-# Start Bot 
-$ python3 -m SophiaMusic
-```
-
-### Commands for Group 🛠
+### Commands 🛠
 #### For all in group
-
-- `/play <song name>` - play song you requested
-- `/play <reply to audio>` - play replied file
-- `/splay <song name>` - play song you requested via jio saavn
-- `/ytplay <song name>`: Directly play song via Youtube Music
-- `/playlist` - Show now playing list
-- `/current` - Show now playing
+- `/play` - reply to youtube url or song file to play song
+- `/ytp <song name>` - play song without youtube url or song file (best method)
 - `/song <song name>` - download songs you want quickly
 - `/search <query>` - search videos on youtube with details
-- `/saavn <song name>` - download songs you want quickly via saavn
-- `/video <song name>` - download videos you want quickly
 
-
-#### Admins only.
-- `/player` - open music player settings panel
+#### Admins only
 - `/pause` - pause song play
 - `/resume` - resume song play
 - `/skip` - play next song
 - `/end` - stop music play
-- `/userbotjoin` - invite assistant to your chat
-- `/userbotleave` - remove assistant from your chat
-- `/admincache` - Refresh admin list
-- `/musicplayer [on/off]` - Enable/Disable Music Player
-
-#### Authorized users & Misc
-*Authorized users can execute admin commands in authorized group
-- `/auth <reply to user>` - Authorize User
-- `/deauth <reply to user>` - DeAuthorize user
-- `/admincache` - Refesh admin list
-
-
-### Commands for Channel Music Play 🛠
-For linked group admins only:
-- `/cplay <song name>` - play song you requested
-- `/cplay <reply to link>` - play replied youtube link
-- `/cplay <reply to audio>` - play replied file
-- `/csplay <song name>` - play song you requested via jio saavn
-- `/cplaylist` - Show now playing list
-- `/cccurrent` - Show now playing
-- `/cplayer` - open music player settings panel
-- `/cpause` - pause song play
-- `/cresume` - resume song play
-- `/cskip` - play next song
-- `/cend` - stop music play
-- `/userbotjoinchannel` - invite assistant to your chat
-* channel is also can be used instead of c
-
-If you donlt like to play in linked channel:
- 1. Get your channel ID.
- 2. Rename your group to: Channel Music: your_channel_id
- 3. Add @SophiaSLBot as Channel admin with full perms
- 4. add helper to channel
- 5. Simply send commands in your group.
 
 
 ### Commands for Sudo Users ⚔️
@@ -119,9 +38,24 @@ If you donlt like to play in linked channel:
 + Sudo Users can execute any command in any groups
 
 
-### Credits
+## Credits
+DaisyXMusic 
 
-@Sadew451
+#### Contributors
+- [Dihan Randila](https://github.com/dihanofficial): Dev / Owner
+- [InukaAsith](https://github.com/InukaAsith): Dev 
+
+#### Special Credits
+- [Roj Serbest](http://github.com/rojserbest): Callsmusic Developer
+
+This bot is based on the original work done by [Rojserbest](http://github.com/rojserbest). Without his hardwork SophiaMusic won t exist. 
+SophiaXMusic is a modified version of [Callsmusic](https://github.com/callsmusic/callsmusic) for fit the needs of some users
+
+- [StarkGang](https://github.com/StarkGang/)
+- [SpEcHiDe](https://github.com/SpEcHiDe/)
+- [The Hamker Cat](https://github.com/thehamkercat)
+- [Laky(for PyTgCalls)](https://github.com/Laky-64)
+- [Dan (for pyrogram)](https://github.com/delivrance)
 
 
 #### Open Source codes used in this project 
@@ -131,6 +65,5 @@ If you donlt like to play in linked channel:
 
 
 > This project exists thanks to these awesome developers and their codes and contributions.
-
 > And credits goes to all who supported, all who helped and API & environmental requirement package devs and all projects helped in making this project.
 > Special thanks to you for using bot
