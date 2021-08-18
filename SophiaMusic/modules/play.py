@@ -1077,7 +1077,7 @@ async def lol_cb(b, cb):
             [InlineKeyboardButton(" Close Menu 🎛", "cls")],
         ]
     )
-    requested_by = useer_name
+       requested_by = useer_name
     await generate_cover(requested_by, title, views, duration, thumbnail)
     file_path = await convert(youtube.download(url))  
     if chat_id in callsmusic.pytgcalls.active_calls:
@@ -1094,9 +1094,9 @@ async def lol_cb(b, cb):
         await cb.message.delete()
         await b.send_photo(chat_id,
             photo="final.png",
-            caption=f"**🎥Playing:** {}\n**⏳Duration:** {} min\n**👤Requested by:** {}\n\n**#⃣ Queued Position:** {}".format(
-        title, duration, message.from_user.mention(), message.chat.title
-        ), )
+            caption=f"#⃣  Song requested by {r_by.mention} **queued** at position {position}!",
+            reply_markup=keyboard,
+        )
         os.remove("final.png")
         
     else:
@@ -1116,7 +1116,6 @@ async def lol_cb(b, cb):
         await b.send_photo(chat_id,
             photo="final.png",
             reply_markup=keyboard,
-            caption=f"**🎥Playing:** {}\n**⏳Duration:** {} min\n**👤Requested by:** {}\n\n**▶️ Now Playing at `{}`...**".format(
-        title, duration, message.from_user.mention(), message.chat.title
-        ), )
+            caption=f"▶️ **Playing** here the song requested by {r_by.mention} via Youtube Music 😜",
+        )
         os.remove("final.png")
