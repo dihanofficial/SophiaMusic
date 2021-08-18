@@ -1094,9 +1094,9 @@ async def lol_cb(b, cb):
         await cb.message.delete()
         await b.send_photo(chat_id,
             photo="final.png",
-            caption=f"#⃣  Song requested by {r_by.mention} **queued** at position {position}!",
-            reply_markup=keyboard,
-        )
+            caption=f"**🎥Playing:** {}\n**⏳Duration:** {} min\n**👤Requested by:** {}\n\n**#⃣ Queued Position:** {}".format(
+        title, duration, message.from_user.mention(), message.chat.title
+        ), )
         os.remove("final.png")
         
     else:
@@ -1116,6 +1116,7 @@ async def lol_cb(b, cb):
         await b.send_photo(chat_id,
             photo="final.png",
             reply_markup=keyboard,
-            caption=f"▶️ **Playing** here the song requested by {r_by.mention} via Youtube Music 😜",
-        )
+            caption=f"**🎥Playing:** {}\n**⏳Duration:** {} min\n**👤Requested by:** {}\n\n**▶️ Now Playing at `{}`...**".format(
+        title, duration, message.from_user.mention(), message.chat.title
+        ), )
         os.remove("final.png")
