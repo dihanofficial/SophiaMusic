@@ -45,7 +45,8 @@
 
 
 ## Credits
-DaisyXMusic 
+- DaisyXMusic 
+- Callmusic 
 
 #### Contributors
 - [Dihan Randila](https://github.com/dihanofficial): Dev / Owner
