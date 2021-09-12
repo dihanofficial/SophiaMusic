@@ -9,13 +9,11 @@ from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
     & ~ filters.edited
 )
 async def start_(client: Client, message: Message):
-    await message.reply_sticker("CAACAgUAAx0CQELqEwACJT9hFkRsyBfjMt4V-azZJt0IeojVKgACxQIAAiS6mVbvGguidLMMxSAE")
     await message.reply_text(
         f"""<b> Hi there,👋 {message.from_user.first_name}!
-\n I can play music in voice chats of Telegeam Groups.
-I have a lot of Super feature that will amaze you!
-\nTo add in your group contact us at @dihan_official .
-\nHit /help list of available commands.
+\nThis is Sophia Music Bot.
+I play music on Telegram's Voice Chats.
+\nFo More Help Use Buttons Below:
  </b>""",
       
        
@@ -33,7 +31,7 @@ I have a lot of Super feature that will amaze you!
                     )
                 ],[ 
                     InlineKeyboardButton(
-                        "➕ Add Me To Your Group ➕", url="https://t.me/SophiaMusicBot?startgroup=true"
+                        "➕ Add Me To Your Group ➕", url="https://t.me/SophiaSLBot?startgroup=true"
                     )]
             ]
         ),
@@ -42,7 +40,7 @@ I have a lot of Super feature that will amaze you!
 
 @Client.on_message(filters.command("start") & ~filters.private & ~filters.channel)
 async def gstart(_, message: Message):
-      await message.reply_text("""**Sophia Music Player Online ✅**""",
+      await message.reply_text("""Thanks for having me in {cb.message.chat.title}. *Sophia Music Bot is alive.*""",
       reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -54,43 +52,3 @@ async def gstart(_, message: Message):
    )
 
 
-@Client.on_message(
-    filters.command("help")
-    & filters.private
-    & ~ filters.edited
-)
-async def help(client: Client, message: Message):
-    await message.reply_text(
-        f"""<b>Hey,{message.from_user.first_name}!
-\n/play <song name> - play song you requested
-/dplay <song name> - play song you requested via deezer
-/splay <song name> - play song you requested via jio saavn
-/playlist - Show now playing list
-/current - Show now playing
-/song <song name> - download songs you want quickly
-/search <query> - search videos on youtube with details
-/deezer <song name> - download songs you want quickly via deezer
-/saavn <song name> - download songs you want quickly via saavn
-/video <song name> - download videos you want quickly
-\n*Admins only*
-/player - open music player settings panel
-/pause - pause song play
-/resume - resume song play
-/skip - play next song
-/end - stop music play
-/userbotjoin - invite assistant to your chat
-/admincache - Refresh admin list
- </b>""",
-        reply_markup=InlineKeyboardMarkup(
-            [
-                [
-                    InlineKeyboardButton(
-                        "💬 Updates Channel", url="https://t.me/dihanofficial"
-                    ),
-                    InlineKeyboardButton(
-                        "💻 Support Group", url="https://t.me/dihan_official"
-                    )
-                ]
-            ]
-        )
-    )    
