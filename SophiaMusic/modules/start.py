@@ -40,7 +40,7 @@ I play music on Telegram's Voice Chats.
 
 @Client.on_message(filters.command("start") & ~filters.private & ~filters.channel)
 async def gstart(_, message: Message):
-      await message.reply_text("""Thanks for having me in {cb.message.chat.title}. *Sophia Music Bot is alive.*""",
+      await message.reply_text("""*Sophia Music Bot is alive.*""",
       reply_markup=InlineKeyboardMarkup(
             [
                 [
