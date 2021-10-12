@@ -24,7 +24,7 @@ from SophiaMusic.config import BOT_NAME as bn
 from SophiaMusic.config import DURATION_LIMIT
 from SophiaMusic.config import UPDATES_CHANNEL as updateschannel
 from SophiaMusic.config import que
-
+from SophiaMusic.config import THUMB_IMG
 from SophiaMusic.function.admins import admins as a
 from SophiaMusic.helpers.admins import get_administrators
 from SophiaMusic.helpers.channelmusic import get_chat_id
