@@ -10,11 +10,11 @@ from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 )
 async def start_(client: Client, message: Message):
     await message.reply_text(
-        f"""<b> Hi there,👋 {message.from_user.first_name}!
+        f"""Hi there,👋 {message.from_user.first_name}!
 \nThis is Sophia Music Bot.
 I play music on Telegram's Voice Chats.
 \nFo More Help Use Buttons Below:
- </b>""",
+ """,
       
        
         reply_markup=InlineKeyboardMarkup(
@@ -24,10 +24,10 @@ I play music on Telegram's Voice Chats.
                         "🛠 Source Code 🛠", url="https://github.com/dihanofficial/sophiamusic-v6")
                   ],[
                     InlineKeyboardButton(
-                        "💬 Updates Channel", url="https://t.me/dihanofficial"
+                        "💬 Updates Channel", url="https://t.me/SophiaUpdates"
                     ),
                     InlineKeyboardButton(
-                        "💻 Support Group", url="https://t.me/dihan_official"
+                        "💻 Support Group", url="https://t.me/SophiaSupport_Official"
                     )
                 ],[ 
                     InlineKeyboardButton(
@@ -45,7 +45,7 @@ async def gstart(_, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        "💬 Updates Channel", url="https://t.me/dihanofficial")
+                        "💬 Updates Channel", url="https://t.me/SophiaUpdates")
                 ]
             ]
         )
