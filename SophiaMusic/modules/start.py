@@ -21,7 +21,7 @@ I play music on Telegram's Voice Chats.
             [
                 [
                     InlineKeyboardButton(
-                        "🛠 Source Code 🛠", url="https://github.com/dihanofficial/sophiamusic-v6")
+                        "🛠 Source Code 🛠", url="https://github.com/dihanofficial/sophiamusic")
                   ],[
                     InlineKeyboardButton(
                         "💬 Updates Channel", url="https://t.me/SophiaUpdates"
